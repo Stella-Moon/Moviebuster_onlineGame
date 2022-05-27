@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;0,700;0,800;1,300;1,800&display=swap');
+
+html {
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+    font-family:  "Open Sans",Arial, sans-serif;
+    font-weight: 300;
+    
+   background-color: #363636;
+   color: white;
+   padding: 0;
+   margin: 0;
+   
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh; /*Höhe soll 100% des Viewports sein */
+}
+
+main {padding: 4rem;}
+
+
+* {
+    padding: 0.5rem;
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-weight: 800;
+    }
+
+    
+h1, h2, h3, h4, h5, p { 
+   margin-bottom: 0.2em;
+ }
+
+   .masterhead {
+       font-size: 2.8rem;
+       margin: 1rem;
+    }
+
+    .masterh2 {font-size: 1.2rem;}
+
+   .bold {font-weight: 500;}
+   .italic {font-style: italic;}
+   .green {color: #b3ffc2;}
+   
+
+   .small {font-size: 0.8rem;}
+
+   .link {
+       color: #ccebff;
+   }
+
+   .link:hover, .link:focus {
+             text-decoration: none;
+   }
+
+   .link:visited {
+color: #e4c9ff;
+   }
+
+   header {
+       background-color: #171717;
+       margin: -1rem;
+   }
+
+   .flex {
+       display: flex;
+       flex-flow: row;
+       align-items: center;
+       flex-wrap: wrap;
+   }
+
+    footer {
+       background-color: #171717;
+       margin: -1rem;
+       margin-top:auto;
+     }
+
+
+/* Startpage*/
+
+.blackbox {
+  background-color: #171717; 
+  margin: 2rem;
+  padding: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     /*Shop */
+     .produktbild {max-width: 50%;}
+
+.produkdetail-tab td {
+padding: 0.5rem;
+}
+
+.more-info td {
+padding: 0.5rem 1.8rem 0.5rem 0;
+}
+.more-info li {
+    margin-bottom: -1rem;
+}
+
+select {
+    font-family: inherit;
+    background-color: #242424;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+}
+
+
+.zwischentitel {
+    margin-bottom: -1rem;
+}
+.waren-button {
+    padding: 1rem 2rem;;
+    background-color:#e3e3e3;
+    color: #171717;
+    border: none;
+    border-radius: 15px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.waren-button:hover, .waren-button:focus {
+    background-color: #171717;
+    color: white;
+}
+
+
+.trailervid {
+    font-family: inherit;
+    max-width: 515px;
+}
+
+
+
+
+
+
+
+
+/* Responsive all pages*/ 
+
+
+/* ganz klein; unter 350 px*/
+@media screen and (max-width: 350px){
+
+    
+  main {padding: 0.2rem;}
+
+  * {padding: 0.1rem;}
+
+  .masterhead {font-size: 2.1rem; }
+
+  .masterh2 {font-size: 1rem;
+  margin-left: 0.6rem;}
+
+  .zwischentitel {margin-bottom: 0;}
+
+}
+
+
+/* klein; unter 500 px*/
+@media screen and (max-width: 500px) {
+
+  .produkdetail-tab td {font-size: 0.9rem;}
+  
+  p {font-size: 0.9rem;}
+
+  .more-info td {
+      padding: 0.5rem 1rem 0.5rem 0;
+      font-size: 0.9rem;
+      }
+
+  main {padding: 0.6rem;}
+
+  .produktbild {max-width: 90%;}
+
+  .waren-button {font-size: 0.9rem;}
+
+  .trailervid {width: 90%;
+  height: auto;}
+
+}
+
+/* gross; über 900 px*/
+  @media screen and (min-width: 900px) {
+    .zweier-grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+    }
+
+  }
+  

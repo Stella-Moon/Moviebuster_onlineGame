@@ -1,7 +1,91 @@
-body {
-    font-family: "Courier";
-  }
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;0,700;0,800;1,300;1,800&display=swap');
+
+html {
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box; 
+  font-family:  "Open Sans",Arial, sans-serif;
+  font-weight: 300;
   
+ background-color: #363636;
+ color: white;
+ padding: 0;
+ margin: 0;
+ 
+}
+
+
+body {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh; /*Höhe soll 100% des Viewports sein */
+}
+
+main {padding: 4rem;}
+
+
+* {
+  padding: 0.5rem;
+  }
+
+  h1, h2, h3, h4, h5 {
+      font-weight: 800;
+  }
+
+  
+h1, h2, h3, h4, h5, p { 
+ margin-bottom: 0.2em;
+}
+
+ .masterhead {
+     font-size: 2.8rem;
+     margin: 1rem;
+  }
+
+  .masterh2 {font-size: 1.2rem;}
+
+ .bold {font-weight: 500;}
+ .italic {font-style: italic;}
+ .green {color: #b3ffc2;}
+ 
+
+ .small {font-size: 0.8rem;}
+
+ .link {
+     color: #ccebff;
+ }
+
+ .link:hover, .link:focus {
+           text-decoration: none;
+ }
+
+ .link:visited {
+color: #e4c9ff;
+ }
+
+ header {
+     background-color: #171717;
+     margin: -1rem;
+ }
+
+ .flex {
+     display: flex;
+     flex-flow: row;
+     align-items: center;
+     flex-wrap: wrap;
+ }
+
+  footer {
+     background-color: #171717;
+     margin: -1rem;
+     margin-top:auto;
+   }
+
+/*End allgemein */
+ 
+
+/*OLD */
+
+/*
   #score,
   .highscore {
     text-align: center;
@@ -85,14 +169,90 @@ body {
     background-size: cover;
     animation: moveBg 10.33s linear infinite;
   }
-  
+  */
+
+/*End OLD */
+
+.gametitle {text-align: left;}
+
+#score {
+  text-align: center;
+  color: white;
+}
+h1 {color: white;
+text-align: center;
+}
+
+#highscore {
+  color: white;
+ text-align: center;
+ }
+
+#game {
+  width: 600px;
+  height: 300px;
+  border: 2px solid black;
+  margin: auto;
+  background-image: url("https://lh3.googleusercontent.com/t8jzr310rC5obgwRHRljXVYqpVt_LwPzoBoBknYxU9QH4sDPlItjYN_IGNbDIaK6d89pVC7XxGM87-QypJ9CmgHXSA=w640-h400-e365-rj-sc0x00ffffff");
+  background-size: cover;
+  animation: moveBg 6.33s linear infinite;
+}
+
+#ship {
+  height: 90px;
+  width: 125px;
+  top: 150px;
+  position: relative;
+  background-image: url("https://www.pngkey.com/png/full/48-480753_designs-spacecraft-png-spaceship-birds-eye-view.png");
+  background-size: cover;
+
+}
+
+#rock {
+  width: 65px;
+  height: 50px;
+  position: relative;
+  top: 80px;
+  left: 550px;
+  background-image: url("https://www.pngall.com/wp-content/uploads/12/Asteroid-Meteor-PNG.png");
+  background-size: cover;
+  animation: rock 2s infinite;
+}
+
+
+.background {
+  background-size: cover;
+    
+}
+
+@keyframes rock {
+  0% { left: 550px; }
+
+  100% { left: -65px; }
+}
+
+.jump-animation {
+  animation: jump 0.8s;
+}
+
+@keyframes jump {
+  0% { top: 150px; }
+
+  50% { top: 60px; }
+
+  75% {  top: 60px; }
+
+  100% { top: 150px; }
+}
+
+
   @keyframes moveBg {
-    0% {
-      background-position: 0 0;
-    }
+    0% { background-position: 0 0; }
    
-    100% {
-      background-position:  -600px 0;
-    }
+    100% { background-position:  -600px 0; }
   }
+  
+
+  .death 
+  {background-color: red;}
   
