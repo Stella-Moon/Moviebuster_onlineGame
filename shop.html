@@ -5,17 +5,109 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online-Shop Produktseite</title>
+           <title>Moviebuster - Produktdetails Master and Commander </title>
+     <link rel="stylesheet" href="assets/css/index-shop.css">
+     <link rel="icon" type="image/png" href="assets/data/favicon.png">
+     <script src="assets/js/script.js"> </script>
+  
 
   </head>
 
   <body>
-    <pre> 
-       Eine Beispielseite - Produktseite (Arbeitsauftrag M291)
+   
+    <header class="flex">
+      <img src="assets/data/logo.png" alt="Logo Moviebuster" height="100">
+        <h1 class="masterhead"> Moviebuster </h1>
+        <div class="navigation">
+          <p> <a  class ="navilink" href="shop.html"> Shop </a></p>
+      </div>
+          </header>
+  
+    <main class="zweier-grid">
+  
+    <div class="produktdetail"> 
+      <h2 > Master and Commander - Bis ans Ende der Welt </h2>
+      <img src="assets/data/shop/M&C.png" alt="Produktbild Film 'Master and Commander'" class="produktbild"> 
+  
+    
+      <table class="more-info"> 
+      <tr> 
+          <td class="bold"> Originaltitel:  </td> <td> Master and Commander - <br> The Far Side of the World </td>
+      </tr>
+  <tr> 
+    <td class="bold"> Erscheinungsjahr:  </td> <td> 2003 </td>
+  </tr>
+  <tr> 
+    <td class="bold"> Regie:  </td> <td> Peter Weir </td>
+  </tr>
+  
+  <tr> 
+    <td class="bold"> Laufzeit:  </td> <td> 133 min</td>
+  </tr>
+  
+  <tr> 
+    <td class="bold"> FSK-Freigabe:  </td> <td> 12 </td>
+  </tr>
+  
+  <tr> 
+    <td class="bold"> Produktionsland:  </td> <td> USA </td>
+  </tr>
+  <tr> 
+    <td class="bold"> Schauspieler:  </td> <td> <ul> <li> Russell Crowe</li>  <li> Paul Bettany </li>  <li> James D'Arcy </li>  <li>Billy Boyd  </li></ul> </td>
+  </tr>
+  
+  
+      </table>
+  
+      
+  </div> <!-- Ende Produktinfo-->
+  
+  <div class="zusatzinfo"> 
+      <form name="kategorienwahl" class="katiwahl">
+  
+   
+  <select onchange=preisdiffer() name="medium"> 
+  <option name="med" value="dvd"> DVD </option>
+  <option name="med" value="bluray"> BluRay </option>
+  <option name="med" value="video"> Videokassette </option>
+  </select>
+      
+  
+      </form>
+  
+      <table class="produkdetail-tab"> 
+        <tr> <td class="bold"> Medium </td> <td class="bold"> Preis </td></tr>
+        <tr> <td id="mediumtext"> DVD  </td> <td id="preistext">  CHF 13 </td></tr>
         
-    </pre>         
-
-
+            </table>
+  
+            <button class="waren-button" onclick="document.getElementById('warenkorbtext').innerHTML = 'Bitte loggen Sie sich ein, um Produkte dem Warenkorb hinzuzufügen'"> In den Warenkorb</button>
+            <p id="warenkorbtext" class="small"></p> 
+            <p id="verfuegbar"> <span class="green">An Lager</span> <br>Auslieferung erfolgt in der Regel innert 2-3 Werktagen </p>
+            
+  
+      <div class="zsmfassung">
+        <h3 class="zwischentitel"> Zusammenfassung </h3>
+        <p> 1805: England steht unter der Bedrohung von Napoleon erobert zu werden. Auf Befehl der Admiralität befindet sich das britische Navy-Schiff <span class="italic"> HMS Surprise</span> unter dem Kommando von Kapitän Jack Aubrey auf hoher See. 
+          Aubrey soll das französische Kaperschiff <span class="italic"> Acheron </span>abfangen, das sich bei Brasilien aufhalten soll und eine Bedrohung für die britische Vormacht darstellt. 
+          Doch die <span class="italic"> Acheron </span> kommt ihnen zuvor und überrascht die Besatzung in einer Nebelbank. Es kommt zu Auseinandersetzungen, die ihre Opfer fordern.
+        </p>
+      </div>
+  
+  <h3 class="zwischentitel">Trailer  </h3>
+  <iframe class="trailervid" src="https://www.youtube.com/embed/R9li7E_YZyY" title="YouTube video player" 
+  frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls></iframe>
+  <br> 
+  
+  </div> <!--Ende  Zusatzinfos-->
+  
+  
+    </main>
+  
+  
+    <footer> <p> ©2022 Moviebuster (Linda, Marija, Simona) </p> <p> made with <a class ="link" href="https://github.com/"> GitHub</a> </p> </footer>
+  
+    
   </body>
 
 </html>

@@ -4,23 +4,42 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dino Game</title>
+           <title>Moviebuster - Onlinegame </title>
+           <link rel="icon" type="image/png" href="assets/data/favicon.png">
     <link rel="stylesheet" href="assets/css/game.css">
+    <script src="assets/js/script.js"> </script>
 
   </head>
 
   <body>
-    <div id="game">
-      <div id="background"></div>
-      <div id="dino"></div>
-      <div id="rock"></div>
-    </div>
-    <div id="score">0</div>
-    <div class="highscore">
-      Highscore: <span id="highscore-value">0</span>
-    </div>
 
+    <header class="flex">
+      <img src="assets/data/logo.png" alt="Logo Moviebuster" height="100">
+        <h1 class="masterhead"> Moviebuster </h1>
+        <div class="navigation">
+          <p> <a  class ="navilink" href="shop.html"> Shop </a></p>
+      </div>
+          </header>
 
+          <main> 
+            <h1 class="gametitle"> Erleben Sie Thors Abenteuer mit </h1>
+            
+            <div id="game">
+              <div id="ship"></div>
+              <div id="rock"></div>
+            </div>
+            
+            <h1 id="score">0</h1>
+            <div class="best-score">
+            
+           
+            <h1> Highscore</h1>
+            <h1 id="highscore"> 0 </h1>
+            </div>
+
+  </main>
+
+  <footer> <p> ©2022 Moviebuster (Linda, Marija, Simona) </p> <p> made with <a class ="link" href="https://github.com/"> GitHub</a> </p> </footer>
     <script src="assets/js/game.js"></script>
   </body>
 
