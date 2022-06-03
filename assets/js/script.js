@@ -1,5 +1,7 @@
 // index
 
+// Formularvalidierung
+
 // Formulardaten in Datenbank
 
 
@@ -37,11 +39,14 @@ const databaseClient = {
     const sql = `INSERT INTO ${tableName} (${fields.join(",")}) VALUES ("${values.join(",")}")`
     return await databaseClient.executeSqlQuery(sql)
   }
+  
+  location.href = "././game.html";
 
 }
 
 
-// game in game.js
+// game code in game.js
+
 
 // shop
 function preisdiffer() {
