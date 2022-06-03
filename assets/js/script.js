@@ -2,9 +2,10 @@
 
 // Formularvalidierung
 
-// Formulardaten in Datenbank
 
+// Formulardaten in Datenbank speichern
 
+/*
 const databaseClient = {
   // Account Daten
   data: {
@@ -42,7 +43,7 @@ const databaseClient = {
   
   location.href = "././game.html";
 
-}
+} */
 
 
 // game code in game.js
