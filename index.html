@@ -11,7 +11,16 @@
      <script src="assets/js/script.js"> </script>
     
     <script>
-	    
+// Datenbank 
+	
+const databaseClient = {
+  // Account Daten
+  data: {
+    url: "https://database-teacher-onlineshop.herokuapp.com/sql",
+        group: "al8",
+        pw: "31349893",
+    sql: ""
+  },    
 	    
 const vorname = document.getElementById("vorname");
 const nachname = document.getElementById("nachname");
@@ -22,8 +31,9 @@ const submitbutton = document.getElementById("submitbutton");
 	    
 	     // submitbutton.disabled = true;
 	
+	    submitbutton.addEventListener('click', (event) => {
 
-function validierung(){
+// function validierung(){
 
 			 /* if(email.value == ""){
 
@@ -35,16 +45,7 @@ function validierung(){
 			{ 
 			return true; */
 			
-	// Datenbank 
 	
-	const databaseClient = {
-  // Account Daten
-  data: {
-    url: "https://database-teacher-onlineshop.herokuapp.com/sql",
-        group: "al8",
-        pw: "31349893",
-    sql: ""
-  },
 
   // HTTP Request an die Datenbank
   // Mitgegeben wird ein SQL Query als String 
@@ -67,8 +68,10 @@ function validierung(){
 
   // Mitgegeben wird der Name der Tabelle als String, die Felder als Array und die Werte als Array.
   // Beispiel: databaseClient.insertInto("customers", ["firstname", "email"], [firstname.value, email.value])
+		
   insertInto: async (tableName = "gameusers", fields =  ["vorname", "nachname, "email", "gewinnwahl"], values = [vorname.value, nachname.value, email.value, gewinnwahl.value]) => {
-    const sql = `INSERT INTO ${tableName} (${fields.join(",")}) VALUES ("${values.join(",")}")`
+  databaseClient.insertInto("gameusers" ["vorname", "nachname, "email", "gewinnwahl"], [vorname.value, nachname.value, email.value, gewinnwahl.value])
+ const sql = `INSERT INTO ${tableName} (${fields.join(",")}) VALUES ("${values.join(",")}")`
     return await databaseClient.executeSqlQuery(sql)
   }
   
@@ -77,7 +80,7 @@ function validierung(){
 }
 		// }
 		
-		} // Ende validierung
+		} ) // Ende validierungs funktion
 
 	</script>
 
