@@ -10,12 +10,17 @@
      <link rel="icon" type="image/png" href="assets/data/favicon.png">
      <script src="assets/js/script.js"> </script>
     
-    <script language="javascript">
+    <script>
+	    
+	    
 const vorname = document.getElementById("vorname");
 const nachname = document.getElementById("nachname");
 const email = document.getElementById("email");
 const gewinnauswahl = document.getElementById("gewinnauswahl");
 const submitbutton = document.getElementById("submitbutton");
+	    
+	    
+	     // submitbutton.disabled = true;
 	
 
 function validierung(){
@@ -24,8 +29,10 @@ function validierung(){
 
 			document.getElementById('infotext-mail').innerHTML = "Bitte dieses Feld ausfüllen!";
 			return false;
-			}else{
-
+			}
+			
+			else
+			{ 
 			return true; */
 			
 	// Datenbank 
