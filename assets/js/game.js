@@ -1,16 +1,16 @@
 // Game
-const ship = document.getElementById("ship");
-const rock = document.getElementById("rock");
+const thor = document.getElementById("thor");
+const blitz = document.getElementById("blitz");
 let score = document.getElementById("score");
 const highscore = document.getElementById("highscore");
 
 
 const restartGame = () => {
   const scoreNumber = parseInt(score.innerText);
-  const highscoreNumber = parseInt(highscore.innerText);
+ /* const highscoreNumber = parseInt(highscore.innerText);
   if (scoreNumber > highscoreNumber) {
     highscore.innerText = scoreNumber;
-  }
+  } */
 
   score.innerText = 0;
 
@@ -18,40 +18,40 @@ const restartGame = () => {
 }
 
 function jump() {
-  ship.classList.add("jump-animation");
+  thor.classList.add("jump-animation");
   setTimeout(() =>
-    ship.classList.remove("jump-animation"), 1200);
+    thor.classList.remove("jump-animation"), 1200);
 }
 
 document.addEventListener('keypress', (event) => {
-  if (!ship.classList.contains('jump-animation')) {
+  if (!thor.classList.contains('jump-animation')) {
     jump();
   }
 })
 
 window.setInterval(() => {
-  const shipTop = parseInt(window.getComputedStyle(ship)
+  const thorTop = parseInt(window.getComputedStyle(thor)
     .getPropertyValue('top'));
-  const rockLeft = parseInt(window.getComputedStyle(rock)
+  const blitzLeft = parseInt(window.getComputedStyle(blitz)
     .getPropertyValue('left'));
   score.innerText++;
  
 
-  if (rockLeft < 0) {
-    rock.style.display = 'none';
+  if (blitzLeft < 0) {
+    blitz.style.display = 'none';
   } else {
-    rock.style.display = ''
+    blitz.style.display = ''
   }
 
-  if (rockLeft < 75 && rockLeft > 0 && shipTop > 90) {
+  if (blitzLeft < 75 && blitzLeft > 0 && thorTop > 90) {
 
 
     restartGame();
 
 
-    ship.classList.add("death");
+    thor.classList.add("death");
     setTimeout(() =>
-      ship.classList.remove("death"), 300);
+      thor.classList.remove("death"), 300);
 
     /*alert("You got a score of: " + score.innerText +
         "\n\nPlay again?");
