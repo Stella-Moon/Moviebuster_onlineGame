@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-           <title>Onlineshop - Moviebuster </title>
+           <title> Onlineshop - Moviebuster </title>
      <link rel="stylesheet" href="assets/css/index-shop.css">
      <link rel="icon" type="image/png" href="assets/data/favicon.png">
      <script src="assets/js/script.js"> </script>
@@ -15,17 +15,63 @@ const vorname = document.getElementById("vorname");
 const nachname = 
 const email = 
 const gewinnauswahl = 
-		function test(){
+const submitbutton = 
+	
+
+function validierung(){
 
 			if(email.value == ""){
 
-			document.getElementById('emailid').innerHTML = "Bitte alle Felder ausfüllen";
+			document.getElementById('infotext-mail').innerHTML = "Bitte dieses Feld ausfüllen!";
 			return false;
 			}else{
 
 			return true;
-			}
+			
+	
+	// Datenbank 
+	
+	const databaseClient = {
+  // Account Daten
+  data: {
+    url: "https://database-teacher-onlineshop.herokuapp.com/sql",
+        group: "al8",
+        pw: "31349893",
+    sql: ""
+  },
+
+  // HTTP Request an die Datenbank
+  // Mitgegeben wird ein SQL Query als String 
+    
+  executeSqlQuery: async (sql) => {
+    databaseClient.data.sql = sql
+    const response = await fetch(databaseClient.data.url, {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: "POST",
+      body: JSON.stringify(databaseClient.data)
+    })
+    const result = await response.json()
+    console.log("SQL Query executed: ", result, sql)
+    
+    return result
+  },
+
+  // Mitgegeben wird der Name der Tabelle als String, die Felder als Array und die Werte als Array.
+  // Beispiel: databaseClient.insertInto("customers", ["firstname", "email"], [firstname.value, email.value])
+  insertInto: async (tableName = "gameusers", fields =  ["vorname", "nachname, "email", "gewinnwahl"], values = [vorname.value, nachname.value, email.value, gewinnwahl.value]) => {
+    const sql = `INSERT INTO ${tableName} (${fields.join(",")}) VALUES ("${values.join(",")}")`
+    return await databaseClient.executeSqlQuery(sql)
+  }
+  
+  location.href = "game.html";
+
+}
 		}
+		
+		} // Ende validierung
 
 	</script>
 
@@ -33,23 +79,10 @@ const gewinnauswahl =
   </head>
 
   <body>
-    <!--
-    <pre> 
-        Startseite 
-        
-        - Header mit Logo des Online-Shops 
-            - Hauptnavigation (2 Links: Shop, Game)
-        - Content 
-            - Über diese Seite, kurze Vorstellung des Shops, Motivation zum Mitmachen beim Spiel
-            - Formular (Vorname, Start Game Button) 
-        - Footer
-        
-    </pre>  
-    -->
     
     <header class="flex">
       <img src="assets/data/logo.png" alt="Logo Moviebuster" height="100" href="index.html">
-      <h1 class="masterhead"> <a href="masterhead"> Moviebuster </a> </h1>
+      <h1 class="masterhead"> <a href="index.html" class="masterhead"> Moviebuster </a> </h1>
         <div class="navigation">
         <p> <a class ="navilink" href="shop.html"> Shop </a></p>
       </div>
@@ -67,6 +100,7 @@ const gewinnauswahl =
 <div class="vorname"> 
   <label> Vorname </label>
   <input type="text" id="vorname"> 
+	
 </div>
 
 <div class="nachname"> 
@@ -77,8 +111,9 @@ const gewinnauswahl =
 <div class="email"> 
   <label> E-Mail </label>
   <input type="email" id="email">
+	<p id="infotext-mail"> </p>
 </div>
-<button> Absenden und Spielen </button> <!-- Button der Sendet Und game page lädt-->
+<button id="submitbutton" onclick="validierung()"> Absenden und Spielen </button> <!-- Button der Sendet Und game page lädt-->
       </div>
 	    
 	    <div class="gewinnwahl">
@@ -96,7 +131,7 @@ const gewinnauswahl =
     </main>
   
   
-  <footer> <p> ©2022 Moviebuster | Linda, Marija, Simona </p> <p> made with <a class ="link" href="https://github.com/"> GitHub</a> </p> </footer>
+  <footer> <p> ©2022 Moviebuster | Linda, Marija, Simona </p> <p> made with<a class ="link" href="https://github.com/"> GitHub</a> </p> </footer>
   
 
 
