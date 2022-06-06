@@ -23,35 +23,28 @@ const submitbutton = document.getElementById("submitbutton");
 // alert ("hi");
 // alert("hi  " + gewinnwahl);
 	
-	
-  if(vorname.value == "" )
- {
-
-			document.getElementById('infotext-vn').innerHTML = "Bitte dieses Feld ausfüllen!";
-      document.getElementById('infotext-vn').classList.add("info-visible");
-      
-			}
-
-      else if (vorname.value == "" ) {}
-      else if (nachname.value == "" ) {}
-      else if (gewinnwahl.value == "" ) {}
-			
-			else
-			{ 
-				
-				
 			
    if(email.value == "" )
   {
-
-			document.getElementById('infotext-mail').innerHTML = "Bitte dieses Feld ausfüllen!";
-      document.getElementById('infotext-mail').classList.add("info-visible");
+	  	document.getElementById('infotext-mail').innerHTML = "Bitte dieses Feld ausfüllen!";
+      		document.getElementById('infotext-mail').classList.add("info-visible");
       
 			}
 
-      else if (vorname.value == "" ) {}
-      else if (nachname.value == "" ) {}
-      else if (gewinnwahl.value == "" ) {}
+      else if (vorname.value == "" ) 
+	      
+      		{document.getElementById('infotext-vn').innerHTML = "Bitte dieses Feld ausfüllen!";
+     		 document.getElementById('infotext-vn').classList.add("info-visible");}
+				
+      else if (nachname.value == "" ) 
+	      
+      		{document.getElementById('infotext-nn').innerHTML = "Bitte dieses Feld ausfüllen!";
+     		 document.getElementById('infotext-nn').classList.add("info-visible");}
+	
+      else if (gewinnwahl.value == "" ) 
+      		
+      		{document.getElementById('infotext-win').innerHTML = "Bitte dieses Feld ausfüllen!";
+     		 document.getElementById('infotext-win').classList.add("info-visible");}
 			
 			else
 			{ 
