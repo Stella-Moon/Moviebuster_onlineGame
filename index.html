@@ -28,23 +28,29 @@ const submitbutton = document.getElementById("submitbutton");
   {
 	  	document.getElementById('infotext-mail').innerHTML = "Bitte dieses Feld ausfüllen!";
       		document.getElementById('infotext-mail').classList.add("info-visible");
+	  document.getElementById('infotext-mail').style.display = "block";
       
 			}
 
       else if (vorname.value == "" ) 
 	      
       		{document.getElementById('infotext-vn').innerHTML = "Bitte dieses Feld ausfüllen!";
-     		 document.getElementById('infotext-vn').classList.add("info-visible");}
+     		 document.getElementById('infotext-vn').classList.add("info-visible");
+		   document.getElementById('infotext-vn').style.display = "block";
+		}
 				
       else if (nachname.value == "" ) 
 	      
       		{document.getElementById('infotext-nn').innerHTML = "Bitte dieses Feld ausfüllen!";
-     		 document.getElementById('infotext-nn').classList.add("info-visible");}
+     		 document.getElementById('infotext-nn').classList.add("info-visible");
+		   document.getElementById('infotext-nn').style.display = "block";
+		}
 	
       else if (gewinnwahl.value == "" ) 
       		
       		{document.getElementById('infotext-win').innerHTML = "Bitte dieses Feld ausfüllen!";
-     		 document.getElementById('infotext-win').classList.add("info-visible");}
+     		 document.getElementById('infotext-win').classList.add("info-visible");
+		  document.getElementById('infotext-win').style.display = "block";}
 			
 			else
 			{ 
