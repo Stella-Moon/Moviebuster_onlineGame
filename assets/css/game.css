@@ -173,8 +173,6 @@ color: #e4c9ff;
 
 /*End OLD */
 
-
-
 .gametitle {text-align: center;}
 
 #score {
@@ -227,7 +225,7 @@ text-align: center;
   position: relative; 
   top: 90px;
   left: 580px;
-  background-image: url(https://www.google.com/search?q=herz&safe=active&rlz=1C1GCEB_enCH861CH861&source=lnms&tbm=isch&sa=X&ved=2ahUKEwizodGK-pD4AhU-g_0HHZrGCkcQ_AUoAXoECAEQAw&biw=1504&bih=860&dpr=1.5#imgrc=ezY_vBAzyVqc4M);
+  background-image: url(../data/game/herz.png);
   animation: herz 3s infinte; 
 }
 
