@@ -47,7 +47,8 @@ const submitbutton = document.getElementById("submitbutton");
       else if (gewinnwahl == "" ) 
       		
       		{document.getElementById('infotext-win').innerHTML = "Bitte angeben welchen Preis Sie gerne hätten!";
-     		 	  document.getElementById('infotext-win').style.display = "block";}
+     		 	  document.getElementById('infotext-win').style.display = "block";
+          }
 			
 			else
 			{ 
@@ -144,21 +145,21 @@ location.href = "game.html" // Seitenwechsel zu Game
   <input type="email" id="email" value="">
 	<p id="infotext-mail"> </p>
 </div>
-	     <div id="gewinnwahl">
-		<input name="gewinnwahl" id="filme" type="radio" value="filme"> Thor Trilogie (1-3) <br> <br>
+	     <div class="gewinnwahl">
+		<input name="gewinnwahl" id="filme" type="radio" value="filme" required> Thor Trilogie (1-3) <br> <br>
 		<input name="gewinnwahl" id ="kinotickets" type="radio" value="kinotickets" > 2 Kinotickets
     <p id="infotext-win" class="infotext"> </p>   
   </div>
      
 	      
-<button id="submitbutton" onclick="validierung()"> Absenden und Spielen </button> <!-- Button der Sendet Und game page lädt-->
+<button id="submitbutton" onclick="validierung()"> Absenden und Spielen </button> <!-- Button der sendet Und Gamepage lädt-->
       </div>
 	    
     </form>
       
       <div class="blackbox motivation"> 
         <h3> Motivation </h3>
-        <P> User motivation wieso spielen</P> 
+        <P> User motivation:  wieso spielen</P> 
       </div>
 
       </div>
