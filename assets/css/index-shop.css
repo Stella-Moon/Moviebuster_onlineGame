@@ -117,7 +117,12 @@ color: #e4c9ff;
   }
   
 
-
+input[type="text"], input[type="email"]{
+    border-radius: 10px;
+    font-family: inherit;
+    background-color: #ededed;
+    border: none;
+}
 
 
 
@@ -180,10 +185,6 @@ select {
     font-family: inherit;
     max-width: 515px;
 }
-
-
-
-
 
 
 
