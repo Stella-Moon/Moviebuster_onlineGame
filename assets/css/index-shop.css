@@ -159,7 +159,7 @@ select {
 .zwischentitel {
     margin-bottom: -1rem;
 }
-.waren-button {
+.waren-button, #submitbutton {
     padding: 1rem 2rem;;
     background-color:#e3e3e3;
     color: #171717;
