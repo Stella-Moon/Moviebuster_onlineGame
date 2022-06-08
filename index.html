@@ -13,7 +13,7 @@
     <script>
      
     	    
-function validierung(){
+async function validierung(){
 const vorname = document.getElementById("vorname");
 const nachname = document.getElementById("nachname");
 const email = document.getElementById("email");
@@ -57,7 +57,7 @@ const submitbutton = document.getElementById("submitbutton");
 			else
 			{ 
 			
-      const result = await databaseClient.insertInto("gameusers" ["vorname", "nachname", "email", "gewinnwahl"], [vorname.value, nachname.value, email.value, gewinnwahl])
+     
       
         const databaseClient = {
   // Account Daten
@@ -97,9 +97,13 @@ const submitbutton = document.getElementById("submitbutton");
 // restliche values: , nachname.value, email.value, gewinnwahl
   }
 } // Ende Datenbank SQL
-			
 	
-location.href = "game.html" // Seitenwechsel zu Game
+	const result = await databaseClient.insertInto("gameusers" ["vorname", "nachname", "email", "gewinnwahl"], [vorname.value, nachname.value, email.value, gewinnwahl])
+	if (result.error) {
+        alert("Datenbank Fehler: " + JSON.stringify(result.error, null, 2))
+    }		
+	else {
+location.href = "game.html" // Seitenwechsel zu Game }
 	} // Ende else -> Formular senden 
 		
 		} // Ende validierungs funktion
