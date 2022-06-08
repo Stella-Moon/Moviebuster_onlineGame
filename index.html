@@ -87,7 +87,7 @@ const submitbutton = document.getElementById("submitbutton");
   // Mitgegeben wird der Name der Tabelle als String, die Felder als Array und die Werte als Array.
   // Beispiel: databaseClient.insertInto("customers", ["firstname", "email"], [firstname.value, email.value])
   //databaseClient.insertInto("gameusers" ["vorname", "nachname", "email", "gewinnwahl"], [vorname.value, nachname.value, email.value, gewinnwahl])
-  insertInto: async (tableName = "gameusers", fields = ["vorname", "nachname", "email", "gewinnwahl"], values = [vorname.value, nachname.value, email.value, gewinnwahl]) => {
+  insertInto: async (tableName = "gameusers", fields = ["vorname", "nachname", "email", "gewinnwahl"], values = []) => {
     const sql = `INSERT INTO ${tableName} (${fields.join(",")}) VALUES ('${values.join("','")}')`
     return await databaseClient.executeSqlQuery(sql)
 
