@@ -1,7 +1,7 @@
 // index
 
 // Formularvalidierung + Speichern in der Datenbank
-
+/*
 async function validierung(){
 const vorname = document.getElementById("vorname");
 const nachname = document.getElementById("nachname");
@@ -99,7 +99,7 @@ location.href = "game.html" // Seitenwechsel zu Game }
 
 
 
-
+*/
 
 // game code in game.js
 
