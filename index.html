@@ -57,7 +57,8 @@ const submitbutton = document.getElementById("submitbutton");
 			else
 			{ 
 			
-     
+      const result = await databaseClient.insertInto("gameusers" ["vorname", "nachname", "email", "gewinnwahl"], [vorname.value, nachname.value, email.value, gewinnwahl])
+      
         const databaseClient = {
   // Account Daten
   data: {
