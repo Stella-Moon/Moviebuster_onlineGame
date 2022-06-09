@@ -1,127 +1,176 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;0,700;0,800;1,300;1,800&display=swap');
 
 html {
-    -webkit-box-sizing: border-box; 
-    box-sizing: border-box; 
-    font-family:  "Open Sans",Arial, sans-serif;
-    font-weight: 300;
-    
-   background-color: #363636;
-   color: white;
-   padding: 0;
-   margin: 0;
-   
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+
+  background-color: #363636;
+  color: white;
+  padding: 0;
+  margin: 0;
+
 }
 
 body {
   display: flex;
   flex-flow: column;
-  min-height: 100vh; /*Höhe soll 100% des Viewports sein */
+  min-height: 100vh;
+  /*Höhe soll 100% des Viewports sein */
 }
 
-main {padding: 4rem;}
+main {
+  padding: 4rem;
+}
 
-.less-padding {padding: 1rem 0.5rem;}
+.less-padding {
+  padding: 1rem 0.5rem;
+}
 
 
 * {
-    padding: 0.5rem;
-    }
+  padding: 0.5rem;
+}
 
-    h1, h2, h3, h4, h5 {
-        font-weight: 800;
-    }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 800;
+}
 
-    
-h1, h2, h3, h4, h5, p { 
-   margin-bottom: 0.2em;
- }
 
-   .masterhead, #masterhead {
-       font-size: 2.8rem;
-       margin: 1rem;
-       color: white; 
-       text-decoration: none;
-    }
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin-bottom: 0.2em;
+}
 
-    .masterh2 {font-size: 1.2rem;}
+.masterhead,
+#masterhead {
+  font-size: 2.8rem;
+  margin: 1rem;
+  color: white;
+  text-decoration: none;
+}
 
-   .bold {font-weight: 500;}
-   .italic {font-style: italic;}
-   .green {color: #b3ffc2;}
-   
+.masterh2 {
+  font-size: 1.2rem;
+}
 
-   .small {font-size: 0.8rem;}
+.bold {
+  font-weight: 500;
+}
 
-   .link {
-       color: #ccebff;
-   }
+.italic {
+  font-style: italic;
+}
 
-   .link:hover, .link:focus {
-             text-decoration: none;
-   }
+.green {
+  color: #b3ffc2;
+}
 
-   .link:visited {
-color: #e4c9ff;
-   }
 
-   .navilink {
-     color: white;
-     text-decoration: none;
-     padding: 0.8rem;
-   }
+.small {
+  font-size: 0.8rem;
+}
 
-   .navilink:hover, .page-activ {
-     background-color: #363636;
+.link {
+  color: #ccebff;
+}
 
-    
-   }
+.link:hover,
+.link:focus {
+  text-decoration: none;
+}
 
-   header {
-       background-color: #171717;
-       margin: -1rem;
-   }
+.link:visited {
+  color: #e4c9ff;
+}
 
-   .flex {
-       display: flex;
-       flex-flow: row;
-       align-items: center;
-       flex-wrap: wrap;
-   }
+.navilink {
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem;
+}
 
-    footer {
-       background-color: #171717;
-       margin: -1rem;
-       margin-top:auto;
-     }
+.navilink:hover,
+.page-activ {
+  background-color: #363636;
+
+
+}
+
+header {
+  background-color: #171717;
+  margin: -1rem;
+}
+
+.flex {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer {
+  background-color: #171717;
+  margin: -1rem;
+  margin-top: auto;
+}
 
 
 /* Startpage*/
 
 .blackbox {
-  background-color: #171717; 
+  background-color: #171717;
   margin: 2rem;
   padding: 2rem;
 }
 
 
 .infotext {
-    display: none;
-   }
-  
-  
-  .info-visible {
-    display: block;
-    font-family: inherit; 
-    color: #ff8091;
-  }
-  
+  display: none;
+}
 
-input[type="text"], input[type="email"]{
-    border-radius: 10px;
-    font-family: inherit;
-    background-color: #ededed;
-    border: none;
+
+.info-visible {
+  display: block;
+  font-family: inherit;
+  color: #ff8091;
+  font-size: 0.8rem;
+}
+
+
+input[type="text"],
+input[type="email"] {
+  border-radius: 7px;
+  font-family: inherit;
+  background-color: #e3e3e3;
+  border: none;
+  width: 50%;
+  margin-bottom: 0.5rem;
+}
+
+input[type="radio"] {
+  margin-bottom: 1.3rem;
+}
+
+#submitbutton {
+  padding: 0.7rem 1rem;
+  ;
+  background-color: #e3e3e3;
+  color: #171717;
+  border: none;
+  border-radius: 15px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
 }
 
 
@@ -138,74 +187,90 @@ input[type="text"], input[type="email"]{
 
 
 
-     /*Shop */
-     .produktbild {max-width: 50%;}
+/*Shop */
+.produktbild {
+  max-width: 50%;
+}
 
 .produkdetail-tab td {
-padding: 0.5rem;
+  padding: 0.5rem;
 }
 
 .more-info td {
-padding: 0.5rem 1.8rem 0.5rem 0;
+  padding: 0.5rem 1.8rem 0.5rem 0;
 }
+
 .more-info li {
-    margin-bottom: -1rem;
+  margin-bottom: -1rem;
 }
 
 select {
-    font-family: inherit;
-    background-color: #242424;
-    color: white;
-    border: none;
-    padding: 0.4rem 0.8rem;
+  font-family: inherit;
+  background-color: #242424;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
 }
 
 
 .zwischentitel {
-    margin-bottom: -1rem;
-}
-.waren-button, #submitbutton {
-    padding: 1rem 2rem;;
-    background-color:#e3e3e3;
-    color: #171717;
-    border: none;
-    border-radius: 15px;
-    font-family: inherit;
-    font-size: 1rem;
-    font-weight: 500;
+  margin-bottom: -1rem;
 }
 
-.waren-button:hover, .waren-button:focus {
-    background-color: #171717;
-    color: white;
+.waren-button {
+  padding: 1rem 2rem;
+  ;
+  background-color: #e3e3e3;
+  color: #171717;
+  border: none;
+  border-radius: 15px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.waren-button:hover,
+.waren-button:focus {
+  background-color: #171717;
+  color: white;
 }
 
 
 .trailervid {
-    font-family: inherit;
-    max-width: 515px;
+  font-family: inherit;
+  max-width: 515px;
 }
 
 
 
 
-/* Responsive all pages*/ 
+/* Responsive all pages*/
 
 
 /* ganz klein; unter 350 px*/
-@media screen and (max-width: 350px){
+@media screen and (max-width: 350px) {
 
-    
-  main {padding: 0.2rem;}
 
-  * {padding: 0.1rem;}
+  main {
+    padding: 0.2rem;
+  }
 
-  .masterhead {font-size: 2.1rem; }
+  * {
+    padding: 0.1rem;
+  }
 
-  .masterh2 {font-size: 1rem;
-  margin-left: 0.6rem;}
+  .masterhead {
+    font-size: 2.1rem;
+  }
 
-  .zwischentitel {margin-bottom: 0;}
+  .masterh2 {
+    font-size: 1rem;
+    margin-left: 0.6rem;
+  }
+
+  .zwischentitel {
+    margin-bottom: 0;
+  }
 
 }
 
@@ -213,36 +278,44 @@ select {
 /* klein; unter 500 px*/
 @media screen and (max-width: 500px) {
 
-  .produkdetail-tab td {font-size: 0.9rem;}
-  
-  p {font-size: 0.9rem;}
+  .produkdetail-tab td {
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
 
   .more-info td {
-      padding: 0.5rem 1rem 0.5rem 0;
-      font-size: 0.9rem;
-      }
+    padding: 0.5rem 1rem 0.5rem 0;
+    font-size: 0.9rem;
+  }
 
-  main {padding: 0.6rem;}
+  main {
+    padding: 0.6rem;
+  }
 
-  .produktbild {max-width: 90%;}
+  .produktbild {
+    max-width: 90%;
+  }
 
-  .waren-button {font-size: 0.9rem;}
+  .waren-button {
+    font-size: 0.9rem;
+  }
 
-  .trailervid {width: 90%;
-  height: auto;}
+  .trailervid {
+    width: 90%;
+    height: auto;
+  }
 
 }
 
 /* gross; über 900 px*/
-  @media screen and (min-width: 900px) {
-    .zweier-grid {
-        display: grid;
-        grid-template-columns: 50% 50%;
-
-    }
+@media screen and (min-width: 900px) {
+  .zweier-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
 
   }
-  
 
-
-
+}
