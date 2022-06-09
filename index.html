@@ -1,187 +1,96 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-           <title> Onlineshop - Moviebuster </title>
-     <link rel="stylesheet" href="assets/css/index-shop.css">
-     <link rel="icon" type="image/png" href="assets/data/favicon.png">
-     <script src="assets/js/script.js"> </script>
-    
-	  <script> 
-	  async function validierung(){
-const vorname = document.getElementById("vorname");
-const nachname = document.getElementById("nachname");
-const email = document.getElementById("email");
-const gewinnwahl = document.userdata.gewinnwahl.value;
-const submitbutton = document.getElementById("submitbutton");
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Onlineshop - Moviebuster </title>
+  <link rel="stylesheet" href="assets/css/index-shop.css">
+  <link rel="icon" type="image/png" href="assets/data/favicon.png">
+  <script src="assets/js/database.js"> </script>
+  <script src="assets/js/script.js"> </script>
+ 
 
-// alert ("hi");
-// alert("hi  " + gewinnwahl);
-	
-	if (vorname.value == "" ) 
-	      
-      		{document.getElementById('infotext-vn').innerHTML = "Bitte Vornamen angeben!";
-		 document.getElementById('infotext-vn').classList.add("info-visible");
-    		   document.getElementById('infotext-vn').style.display = "block";
-		}
-			
-       
-				
-      else if (nachname.value == "" ) 
-	      
-      		{document.getElementById('infotext-nn').innerHTML = "Bitte Nachnamen angeben!";
-		 document.getElementById('infotext-nn').classList.add("info-visible");
-     		 		   document.getElementById('infotext-nn').style.display = "block";
-		}
-	
-	 else if(email.value == "" )
-  {
-	  	document.getElementById('infotext-mail').innerHTML = "Bitte E-Mail Adresse angeben!";
-	  document.getElementById('infotext-mail').classList.add("info-visible");
-     	  document.getElementById('infotext-mail').style.display = "block";
-      
-			}
-	
-      else if (gewinnwahl == "" ) 
-      		
-      		{document.getElementById('infotext-win').innerHTML = "Bitte angeben welchen Preis Sie gerne hätten!";
-		 document.getElementById('infotext-win').classList.add("info-visible");
-     		 	  document.getElementById('infotext-win').style.display = "block";
-          }
-			
-			else
-			{ 
-			
-     
-      
-        const databaseClient = {
-  // Account Daten
-  data: {
-    url: "https://database-teacher-onlineshop.herokuapp.com/sql",
-    group: "al8",
-    pw: "31349893",
-    sql: "",
- charset: "utf8"
-  },
+  <script>
 
-  // HTTP Request an die Datenbank
-  // Mitgegeben wird ein SQL Query als String 
-  executeSqlQuery: async (sql) => {
-    databaseClient.data.sql = sql
-    const response = await fetch(databaseClient.data.url, {
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      method: "POST",
-      body: JSON.stringify(databaseClient.data)
-    })
-    const result = await response.json()
-    console.log("SQL Query executed: ", result, sql)
-    
-    return result
-  },
+  </script>
+</head>
 
-  // Mitgegeben wird der Name der Tabelle als String, die Felder als Array und die Werte als Array.
-  // Beispiel: databaseClient.insertInto("customers", ["firstname", "email"], [firstname.value, email.value])
-  //databaseClient.insertInto("gameusers" ["vorname", "nachname", "email", "gewinnwahl"], [vorname.value, nachname.value, email.value, gewinnwahl])
-  insertInto: async (tableName = "gameusers", fields = ["vorname", "nachname", "email", "gewinnwahl"], values = [vorname.value, nachname.value, email.value, gewinnwahl]) => {
-    const sql = `INSERT INTO ${tableName} (${fields.join(",")}) VALUES ('${values.join("','")}')`
-    return await databaseClient.executeSqlQuery(sql)
+<body>
 
-    // restliche fields: , "nachname", "email", "gewinnwahl"
-// restliche values: , nachname.value, email.value, gewinnwahl
-  }
-} // Ende Datenbank SQL
-	
-	const result = await databaseClient.insertInto("gameusers" ["vorname", "nachname", "email", "gewinnwahl"], [vorname.value, nachname.value, email.value, gewinnwahl])
-	if (result.error) {
-        alert("Datenbank Fehler: " + JSON.stringify(result.error, null, 2))
-    }		
-	else {
-location.href = "game.html" } // Seitenwechsel zu Game
-	} // Ende else -> Formular senden 
-		
-		} // Ende validierungs funktion
-	  
-	  </script>
-      </head>
+  <header class="flex">
+    <img src="assets/data/logo.png" alt="Logo Moviebuster" height="100" href="index.html">
+    <h1 class="masterhead"> <a href="index.html" id="masterhead"> Moviebuster </a> </h1>
+    <div class="navigation">
+      <p> <a class="navilink" href="shop.html"> Shop </a></p>
+    </div>
+  </header>
 
-  <body>
-    
-    <header class="flex">
-      <img src="assets/data/logo.png" alt="Logo Moviebuster" height="100" href="index.html">
-      <h1 class="masterhead"> <a href="index.html" id="masterhead"> Moviebuster </a> </h1>
-        <div class="navigation">
-        <p> <a class ="navilink" href="shop.html"> Shop </a></p>
-      </div>
-          </header>
+  <main class="less-padding">
+    <div class="index-intro blackbox">
+      <h1> Willkommen bei Moviebuster</h1>
+      <p> Thor 4 Info, und Moviebuster </p>
+    </div>
 
-          <main class="less-padding">
-          <div class="index-intro blackbox"> 
-<h1> Willkommen bei Moviebuster</h1>
-<p> Thor 4 Info, und Moviebuster </p>
+
+    <div class="zweier-grid">
+
+
+      <div class="blackbox formular">
+
+        <form onsubmit="event.preventDefault()" name="userdata">
+          <div class="vorname">
+            <label> Vorname </label>
+            <input type="text" id="vorname" value="">
+            <!-- mit Pattern wird festgelegt, welche Art von Zeichen als Eingabe akzeptiert werden pattern="[a-zA-ZäöüÖÄÜ ]"-->
+            <p id="infotext-vn" class="infotext"> </p>
+
           </div>
 
-            
-    <div class="zweier-grid">
-  
+          <div class="nachname">
+            <label> Nachname </label>
+            <input type="text" id="nachname" value="">
+            <p id="infotext-nn" class="infotext"> </p>
+          </div>
 
-  <div class="blackbox formular"> 
+          <div class="email">
+            <label> E-Mail </label>
+            <input type="email" id="email" value="">
+            <p id="infotext-mail" class="infotext"> </p>
+          </div>
+          <div class="gewinnwahl">
+            <p> Wählen Sie aus, was Sie gewinnen möchten: </p>
+            <input name="gewinnwahl" id="filme" type="radio" value="filme"> Thor Trilogie (1-3) <br>
+            <input name="gewinnwahl" id="kinotickets" type="radio" value="kinotickets"> 2 Kinotickets
+            <p id="infotext-win" class="infotext"> </p>
+          </div>
 
-    <form onsubmit="event.preventDefault()" name="userdata"> 
-<div class="vorname"> 
-  <label> Vorname </label>
-  <input type="text" id="vorname" value=""> <!-- mit Pattern wird festgelegt, welche Art von Zeichen als Eingabe akzeptiert werden pattern="[a-zA-ZäöüÖÄÜ ]"-->
-  <p id="infotext-vn" class="infotext"> </p>
-	
-</div>
 
-<div class="nachname"> 
-  <label> Nachname </label>
-  <input type="text" id="nachname" value=""> 
-  <p id="infotext-nn" class="infotext"> </p>
-</div>
-
-<div class="email"> 
-  <label> E-Mail </label>
-  <input type="email" id="email" value="">
-	<p id="infotext-mail" class="infotext"> </p>
-</div>
-	     <div class="gewinnwahl">
-		<input name="gewinnwahl" id="filme" type="radio" value="filme"> Thor Trilogie (1-3) <br> <br>
-		<input name="gewinnwahl" id ="kinotickets" type="radio" value="kinotickets" > 2 Kinotickets
-    <p id="infotext-win" class="infotext"> </p>   
-  </div>
-     
-	      
-<button id="submitbutton" onclick="validierung()"> Absenden und Spielen </button> <!-- Button der sendet Und Gamepage lädt-->
+          <button id="submitbutton" onclick="validierung()"> Absenden und Spielen </button>
+          <!-- Button der sendet Und Gamepage lädt-->
       </div>
-	    
-    </form>
-      
-      <div class="blackbox motivation"> 
+
+      </form>
+
+      <div class="blackbox motivation">
         <h3> Motivation </h3>
-        <P> User motivation:  wieso spielen</P> 
+        <P> User motivation: wieso spielen</P>
       </div>
 
-      </div>
-
- 
-  
-    </main>
-  
-  
-  <footer> <p> ©2022 Moviebuster | Linda, Marija, Simona </p> <p> made with<a class ="link" href="https://github.com/">GitHub</a> </p> </footer>
-  
+    </div>
 
 
-  </body>
+
+  </main>
+
+
+  <footer>
+    <p> ©2022 Moviebuster | Linda, Marija, Simona </p>
+    <p> made with<a class="link" href="https://github.com/">GitHub</a> </p>
+  </footer>
+
+
+
+</body>
 
 </html>
-
-
- 
