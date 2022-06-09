@@ -78,7 +78,7 @@ async function validierung() {
       }
     } // Ende Datenbank SQL
     
-    const result = await databaseClient.insertInto("gameusers"["vorname", "nachname", "email", "gewinnwahl"], [vorname.value, nachname.value, email.value, gewinnwahl])
+    const result = await databaseClient.insertInto("gameusers", ["vorname", "nachname", "email", "gewinnwahl"], [vorname.value, nachname.value, email.value, gewinnwahl])
     if (result.error) { alert("Datenbank Fehler: " + JSON.stringify(result.error, null, 2))  }
     else { location.href = "game.html" } //Seitenwechsel zu Gamepage
 
