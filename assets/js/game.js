@@ -7,14 +7,14 @@ const highscore = document.getElementById("highscore");
 
 const restartGame = () => {
   const scoreNumber = parseInt(score.innerText);
- /* const highscoreNumber = parseInt(highscore.innerText);
-  if (scoreNumber > highscoreNumber) {
-    highscore.innerText = scoreNumber;
-  } */
+  /* const highscoreNumber = parseInt(highscore.innerText);
+   if (scoreNumber > highscoreNumber) {
+     highscore.innerText = scoreNumber;
+   } */
 
   score.innerText = 0;
 
- 
+
 }
 
 function jump() {
@@ -35,7 +35,7 @@ window.setInterval(() => {
   const blitzLeft = parseInt(window.getComputedStyle(blitz)
     .getPropertyValue('left'));
   score.innerText++;
- 
+
 
   if (blitzLeft < 0) {
     blitz.style.display = 'none';
