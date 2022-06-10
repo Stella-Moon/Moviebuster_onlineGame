@@ -25,18 +25,49 @@
     <h1 class="gametitle"> Erleben Sie Thors Abenteuer! </h1>
 
     <div id="game">
+      <div id="background"></div>
       <div id="thor"></div>
       <div id="blitz"></div>
       <div id="herz"></div>
     </div>
+ 
+    <div class ="blackbox flexbox"> 
 
-    <h1 id="score">0</h1>
-
-    <div class="best-score">
-      <!--
-            <h1> Highscore</h1>
-            <h1 id="highscore"> 0 </h1>-->
+<div id="start-screen">
+      <div id="about-game"> 
+      <h2 class="spiel-titel"> So spielen Sie: </h2>
+      <p class="about-game" > Drücken Sie eine beliebige Taste um zu springen und den Blitzen auszuweichen. Für Bonuspunkte versuchen Sie Herzen einzusammeln. </p>
     </div>
+
+    <button class="button" id="startbutton"> Spiel starten </button>
+
+  </div> <!-- Ende Start Screen -->
+
+    <h1 id="score"> 0</h1>
+    <h1 id="bonustext"> Bonuspunkte: <span id="bonuspoints">0</span></h1>
+
+    <div id="game-over"> 
+      <h2 class="spiel-titel"> Thors Reise ist beendet </h2>
+      <p id="scoreCount"> </p>
+      <p class="lose-text"> Vielen Dank für Ihre Teilnahme. Im Falle eines Gewinns kontaktieren wir Sie per E-Mail.
+         Vertreiben Sie sich doch die Zeit mit Filmen aus <a class="link" href="shop.html">unserem Shop!</a></p>
+      
+    </div>
+
+    <button id="restartbutton" class="button"> Erneut spielen </button>
+    <div class="best-score" id="best-score">
+      <h1> Highscore</h1> <h1 id="highscore"> 0 </h1>
+    </div>
+
+   
+  </div>
+
+  <audio id="audio">
+        <source src="assets/data/game/soundtrack.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="pling">
+    <source src="assets/data/game/pling.mp3" type="audio/mpeg">
+</audio>
 
   </main>
 
