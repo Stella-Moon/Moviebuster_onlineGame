@@ -53,6 +53,8 @@ p {
 #masterhead:visited {
   font-size: 2.8rem;
   margin: 1rem;
+  color: white;
+  text-decoration: none;
 }
 
 .masterh2 {
@@ -101,6 +103,14 @@ p {
   color: #e4c9ff;
 }
 
+.blackbox {
+  background-color: #171717;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 2rem;
+  width: 562px;
+}
+
 header {
   background-color: #171717;
   margin: -1rem;
@@ -119,106 +129,50 @@ footer {
   margin-top: auto;
 }
 
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
 /*End allgemein */
 
 
-/*OLD */
+.button {
+  padding: 0.7rem 1rem;
+  background-color: #e3e3e3;
+  color: #171717;
+  border: none;
+  border-radius: 15px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  width: 50%;
+ 
+ }
 
-/*
-  #score,
-  .highscore {
-    text-align: center;
-    font-size: 2rem;
-    margin-top: 20px;
-  }
-  
-  
-  
-  #game {
-    width: 600px;
-    height: 300px;
-    border: 2px solid black;
-    margin: auto;
-  }
-  
-  
-  #dino {
-    height: 75px;
-    width: 75px;
-    top: 225px;
-    position: relative;
-    background-image: url("https://github.com/kriscfoster/chrome-dino-game/blob/master/dino.png?raw=true");
-    background-size: cover;
-  }
-  
-  .dino-dies {
-    background-color: red;
-  }
-  
-  #blitz {
-    width: 50px;
-    height: 50px;
-    position: relative;
-    top: 175px;
-    left: 550px;
-    background-image: url("https://github.com/kriscfoster/chrome-dino-game/blob/master/rock.png?raw=true");
-    background-size: cover;
-    animation: blitz 1.33s infinite;
-  }
-  
-  @keyframes blitz {
-    0% {
-      left: 550px;
-    }
-  
-    100% {
-      left: -50px;
-    }
-  }
-  
-  .jump-animation {
-    animation: jump 0.5s;
-  }
-  
-  @keyframes jump {
-    0% {
-      top: 225px;
-    }
-  
-    50% {
-      top: 75px;
-    }
-  
-    75% {
-      top: 75px;
-    }
-  
-    100% {
-      top: 225px;
-    }
-  }
-  
-  
-  
-  #background {
-    position: absolute;
-    width: 600px;
-    height: 300px;
-    background-image: url("https://github.com/kriscfoster/chrome-dino-game/blob/master/background.jpg?raw=true");
-    background-size: cover;
-    animation: moveBg 10.33s linear infinite;
-  }
-  */
-
-/*End OLD */
-
-.gametitle {
-  text-align: center;
+.button:hover,
+button:focus {
+  background-color: #363636;
+  color: white;
+ 
 }
 
-#score {
+
+#restartbutton {display: none;}
+
+.spiel-titel {  margin: -1.5rem 0;}
+
+#about-game {  margin-bottom: 1rem;}
+
+.gametitle { text-align: center; }
+
+#score, #bonustext {
   text-align: center;
   color: white;
+  display: none;
 }
 
 h1 {
@@ -226,111 +180,134 @@ h1 {
   text-align: center;
 }
 
+#best-score { display: none;}
+
 #highscore {
   color: white;
   text-align: center;
 }
 
+#game-over {  display: none;}
+
+/*Game elemente*/
+
 #game {
   width: 600px;
   height: 300px;
-  border: 2px solid black;
-  margin: auto;
-  background-image: url("https://lh3.googleusercontent.com/t8jzr310rC5obgwRHRljXVYqpVt_LwPzoBoBknYxU9QH4sDPlItjYN_IGNbDIaK6d89pVC7XxGM87-QypJ9CmgHXSA=w640-h400-e365-rj-sc0x00ffffff");
+   margin: auto;
+   position: relative;
+  
+   }
+
+ #background {
+  position: absolute;
   background-size: cover;
-  animation: moveBg 6.33s linear infinite;
-}
+  width: 600px;
+  height: 300px;
+  background-image: url("https://lh3.googleusercontent.com/t8jzr310rC5obgwRHRljXVYqpVt_LwPzoBoBknYxU9QH4sDPlItjYN_IGNbDIaK6d89pVC7XxGM87-QypJ9CmgHXSA=w640-h400-e365-rj-sc0x00ffffff");
+ }
+
+.background {background-size: cover;}
+
+.bg-animation { animation: moveBg 6.33s linear infinite;}
 
 #thor {
-  height: 90px;
-  width: 125px;
-  top: 150px;
+  height: 75px;
+  width: 75px;
+  top: 225px;
   position: relative;
   background-image: url("https://www.pngkey.com/png/full/48-480753_designs-spacecraft-png-spaceship-birds-eye-view.png");
   background-size: cover;
-
 }
+
+.jump-animation { animation: jump 0.8s;}
 
 #blitz {
-  width: 65px;
+  
+  width: 50px;
   height: 50px;
   position: relative;
-  top: 80px;
-  left: 550px;
+  top: 160px;
+  left: 520px;
   background-image: url("https://www.pngall.com/wp-content/uploads/12/Asteroid-Meteor-PNG.png");
   background-size: cover;
-  animation: blitz 2s infinite;
+  
 }
+
+.blitz-animation {animation: blitz 2s infinite;}
 
 #herz {
-  width: 60px;
-  height: 60px;
-  position: relative;
-  top: 90px;
-  left: 580px;
-  background-image: url(../data/game/herz.png);
-  animation: herz 3s infinte;
-}
-
-@keyframes herz {
-  0% {
-    left: 580px;
-  }
-
-  100% {
-    left: -65px;
-  }
-}
-
-.background {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 60px;
+  left: 520px;
+  background-image: url("https://www.dwds.de/normal/Herz.png");
   background-size: cover;
-
+ 
 }
+
+.herzAnimation { animation: herz1 3s infinite;}
+
+
+
+/* Animations Keyframes*/
 
 @keyframes blitz {
-  0% {
-    left: 550px;
-  }
+  0% {  left: 520px; }
 
-  100% {
-    left: -65px;
-  }
+  100% {   left: -50px; }
 }
 
-.jump-animation {
-  animation: jump 0.8s;
-}
 
 @keyframes jump {
+  0% {   top: 225px; }
+
+  50% {  top: 75px; }
+
+  75% { top: 75px; }
+
+  100% {top: 225px; }
+}
+
+
+
+@keyframes herz1 {
+  0% { left: 520px; }
+
+  100% { left: -65px;}
+}
+
+@keyframes herz2 {
   0% {
-    top: 150px;
-  }
-
-  50% {
-    top: 60px;
-  }
-
-  75% {
-    top: 60px;
+    left: 520px;
+    top: 100px;
   }
 
   100% {
-    top: 150px;
+    left: -50px;
+    top: 20px;
+  }
+}
+
+@keyframes herz3 {
+  0% {
+    left: 520px;
+    top: 100px;
+  }
+
+  100% {
+    left: -50px;
+    top: 0px;
   }
 }
 
 
 @keyframes moveBg {
-  0% {
-    background-position: 0 0;
-  }
+  0% { background-position: 0 0;}
 
-  100% {
-    background-position: -600px 0;
-  }
+  100% { background-position: -600px 0;}
 }
 
-
-.death {
-  background-color: red;
-}
+.death {background-color: red; }
+.herzCollect {background-color: green;}
