@@ -220,7 +220,7 @@ select {
 .waren-button {
   padding: 1rem 2rem;
   ;
-  background-color: #e3e3e3;
+  //background-color: #e3e3e3;//
   color: #171717;
   border: none;
   border-radius: 15px;
