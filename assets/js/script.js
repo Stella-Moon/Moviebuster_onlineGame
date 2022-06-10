@@ -1,6 +1,4 @@
 // index
-
-
 // Formularvalidierung + Speichern in der Datenbank
 async function validierung() {
   const vorname = document.getElementById("vorname");
@@ -79,7 +77,9 @@ async function validierung() {
     } // Ende Datenbank SQL
     
     const result = await databaseClient.insertInto("gameusers", ["vorname", "nachname", "email", "gewinnwahl"], [vorname.value, nachname.value, email.value, gewinnwahl])
-    if (result.error) { alert("Datenbank Fehler: " + JSON.stringify(result.error, null, 2))  }
+    if (result.error) {// alert("Datenbank Fehler: " + JSON.stringify(result.error, null, 2))  
+                        if (console.error) {alert("Es kann nur einen Thor geben. Sie scheinen schon mal hier gewesen zu sein..."); } 
+                      }
     else { location.href = "game.html" } //Seitenwechsel zu Gamepage
 
   } // Ende else -> Formular senden 
