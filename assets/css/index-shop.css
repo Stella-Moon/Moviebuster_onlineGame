@@ -316,8 +316,10 @@ select {
     display: grid;
     grid-template-columns: 50% 50%;
 
-    .flexbox formular {
-    container.flex    
+    .flexbox-formular {
+    display: flex;
+    flex-direction: row;
+    justify-content: around;
   }
 
 }
