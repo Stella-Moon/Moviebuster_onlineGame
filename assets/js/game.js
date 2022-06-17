@@ -15,6 +15,7 @@ const bonustext = document.getElementById("bonustext");
 let herzcount = document.getElementById("bonuspoints");
 const music = document.getElementById("audio");
 const pling = document.getElementById("pling");
+const springen = document.getElementById("spring");
 let gameLoopInterval = 0
 let finalScore = 0;
 let bonuspoints = 0;
@@ -49,12 +50,13 @@ const resetScore = () => {
 
 
 const dieAnimation = () => {
+  thor.backgroundImage = "url('../data/game/tot.png')";
   thor.classList.add("death")
   return new Promise(resolve => setTimeout(() => {
     thor.classList.remove("death")
     resolve()
-  }, 500));
-
+  }, 1000));
+  
 }
 
 function jump() {
@@ -65,6 +67,12 @@ function jump() {
 }
 
 document.addEventListener('keypress', (event) => {
+  if (!thor.classList.contains('jump-animation')) {
+    jump();
+  }
+})
+
+springen.addEventListener('click', (event) => {
   if (!thor.classList.contains('jump-animation')) {
     jump();
   }
