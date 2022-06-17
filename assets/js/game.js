@@ -22,7 +22,6 @@ let bonuspoints = 0;
 
 
 
-
 // Funktionsdeklaration
 
 const startGame = () => {
@@ -42,7 +41,7 @@ const startGame = () => {
 }
 
 
-const resetScore = () => { 
+const resetScore = () => {
   score.innerText = 0
   bonuspoints = 0;
   herzcount.innerText = 0;
@@ -56,14 +55,14 @@ const dieAnimation = () => {
     thor.classList.remove("death")
     resolve()
   }, 1000));
-  
+
 }
 
 function jump() {
   thor.classList.add("jump-animation");
   setTimeout(() =>
     thor.classList.remove("jump-animation"), 700);
-    
+
 }
 
 document.addEventListener('keypress', (event) => {
@@ -84,23 +83,22 @@ const stopGame = async () => {
   await dieAnimation()
   audio.pause()
 
-     const scoreNumber = parseInt(score.innerText);
-       const highscoreNumber = parseInt(highscore.innerText);
-        bonuspoints = parseInt(bonuspoints);
-              
-   
-    score.style.display = "none";
-    gameOver.style.display = "block";
-  
+  const scoreNumber = parseInt(score.innerText);
+  const highscoreNumber = parseInt(highscore.innerText);
+  bonuspoints = parseInt(bonuspoints);
+
+
+  score.style.display = "none";
+  gameOver.style.display = "block";
+
   background.classList.remove("bg-animation")
   blitz.classList.remove("blitz-animation")
   restartButton.style.display = "block";
   bonustext.style.display = "none";
   gameLoopInterval = clearInterval(gameLoopInterval)
   finalScore = scoreNumber + bonuspoints;
-  if (finalScore > highscoreNumber) { highscore.innerText = finalScore; } 
-  // scoreCount.innerText = "Sie haben einen Score von " + scoreNumber + " erreicht. Ihr Highscore ist: " + highscoreNumber + "Total " + finalScore;
- scoreCount.innerText = "Sie haben einen Score von " + finalScore + " erreicht! Ihr Highscore ist " + highscoreNumber;
+  if (finalScore > highscoreNumber) { highscore.innerText = finalScore; }
+  scoreCount.innerText = "Sie haben einen Score von " + finalScore + " erreicht! Ihr Highscore ist " + highscoreNumber;
   herz.classList.remove("herzAnimation")
 }
 
@@ -116,38 +114,38 @@ const randomizeHerzAnimation = (herzLeft) => {
 // Game details
 const startGameLoop = () => {
 
-gameLoopInterval = window.setInterval(() => {
-  const thorTop = parseInt(window.getComputedStyle(thor)
-    .getPropertyValue('top'));
-  const blitzLeft = parseInt(window.getComputedStyle(blitz)
-    .getPropertyValue('left'));
+  gameLoopInterval = window.setInterval(() => {
+    const thorTop = parseInt(window.getComputedStyle(thor)
+      .getPropertyValue('top'));
+    const blitzLeft = parseInt(window.getComputedStyle(blitz)
+      .getPropertyValue('left'));
     const herzLeft = parseInt(window.getComputedStyle(herz)
       .getPropertyValue('left'))
     const herzTop = parseInt(window.getComputedStyle(herz)
       .getPropertyValue('top'))
 
-      randomizeHerzAnimation(herzLeft)
-      score.innerText++;
+    randomizeHerzAnimation(herzLeft)
+    score.innerText++;
 
-  if (blitzLeft < 0) { blitz.style.display = 'none'; } 
-  else { blitz.style.display = '' }
+    if (blitzLeft < 0) { blitz.style.display = 'none'; }
+    else { blitz.style.display = '' }
 
-  if (herzLeft < 0) {  herz.style.display = 'none' } 
-  else { herz.style.display = '' }
+    if (herzLeft < 0) { herz.style.display = 'none' }
+    else { herz.style.display = '' }
 
-  if (herzLeft < 50 && thorTop < (herzTop + 50)) {
-    thor.classList.add("herzCollect");
-    setTimeout(() =>
-    thor.classList.remove("herzCollect"), 300);
-    pling.play();
-    herz.style.display = 'none'
-    bonuspoints = bonuspoints + 100;
-    herzcount.innerText = Number(herzcount.innerText) + 100;
-   
-  }
+    if (herzLeft < 50 && thorTop < (herzTop + 50)) {
+      thor.classList.add("herzCollect");
+      setTimeout(() =>
+        thor.classList.remove("herzCollect"), 300);
+      pling.play();
+      herz.style.display = 'none'
+      bonuspoints = bonuspoints + 100;
+      herzcount.innerText = Number(herzcount.innerText) + 100;
 
-  if (blitzLeft < 50 && blitzLeft > 0 && thorTop > 150) { stopGame(); }
- 
+    }
+
+    if (blitzLeft < 50 && blitzLeft > 0 && thorTop > 150) { stopGame(); }
+
   }, 50);
 
 }
@@ -155,7 +153,7 @@ gameLoopInterval = window.setInterval(() => {
 
 
 startbutton.addEventListener('click', (event) => {
-  if (!gameLoopInterval) { startGame()  }
+  if (!gameLoopInterval) { startGame() }
   else {
     if (!thor.classList.contains('jump-animation')) {
       jump()
@@ -165,7 +163,7 @@ startbutton.addEventListener('click', (event) => {
 })
 
 restartButton.addEventListener('click', (event) => {
-  if (!gameLoopInterval) { startGame()  }
+  if (!gameLoopInterval) { startGame() }
   else {
     if (!thor.classList.contains('jump-animation')) {
       jump()
@@ -173,6 +171,3 @@ restartButton.addEventListener('click', (event) => {
   }
 
 })
-
-
-/* console log für error*/
