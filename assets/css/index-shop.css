@@ -129,8 +129,9 @@ footer {
 
 .blackbox {
   background-color: #171717;
-  margin: 2rem;
-  padding: 2rem;
+  margin: 0rem;
+  padding: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 
@@ -153,7 +154,7 @@ input[type="email"] {
   font-family: inherit;
   background-color: #e3e3e3;
   border: none;
-  width: 50%;
+  width: 85%;
   margin-bottom: 0.5rem;
 }
 
@@ -172,10 +173,22 @@ input[type="radio"] {
   font-weight: 500;
 }
 
-.vorname, .nachname, .email, {
+.vorname, .nachname, .email {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.headerbild {
+  max-height: 300px;
+  object-fit: cover;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.legal {
+  font-size: 0.9rem;
 }
 
 
@@ -223,8 +236,7 @@ select {
 
 .waren-button {
   padding: 1rem 2rem;
-  ;
-  //background-color: #e3e3e3;//
+  background-color: #e3e3e3;
   color: #171717;
   border: none;
   border-radius: 15px;
@@ -325,5 +337,20 @@ select {
     flex-direction: row;
     justify-content: around;
   }
+
+  .blackbox {
+    margin: 2rem;
+    padding: 2rem;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+  border-radius: 7px;
+  font-family: inherit;
+  background-color: #e3e3e3;
+  border: none;
+  width: 50%;
+  margin-bottom: 0.5rem;
+}
 
 }
