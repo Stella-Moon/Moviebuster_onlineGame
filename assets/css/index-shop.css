@@ -20,36 +20,17 @@ body {
   /*Höhe soll 100% des Viewports sein */
 }
 
-main {
-  padding: 4rem;
-}
+main { padding: 4rem;}
 
-.less-padding {
-  padding: 1rem 0.5rem;
-}
+.less-padding {padding: 1rem 0.5rem;}
 
 
-* {
-  padding: 0.5rem;
-} 
+* { padding: 0.5rem;}
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-weight: 800;
-}
+h1, h2, h3, h4, h5 { font-weight: 800;}
 
 
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-  margin-bottom: 0.2em;
-}
+h1, h2,  h3, h4, h5, p {  margin-bottom: 0.2em; }
 
 .masterhead,
 #masterhead {
@@ -59,43 +40,24 @@ p {
   text-decoration: none;
 }
 
-.headerlogo {
-  width: 10%;
-}
+.headerlogo { width: 10%;}
 
-.masterh2 {
-  font-size: 1.2rem;
-}
+.masterh2 {  font-size: 1.2rem;}
 
-.bold {
-  font-weight: 500;
-}
+.bold {  font-weight: 500;}
 
-.italic {
-  font-style: italic;
-}
+.italic { font-style: italic;}
 
-.green {
-  color: #b3ffc2;
-}
+.green { color: #b3ffc2;}
 
 
-.small {
-  font-size: 0.8rem;
-}
+.small {  font-size: 0.8rem;}
 
-.link {
-  color: #ccebff;
-}
+.link { color: #ccebff;}
 
-.link:hover,
-.link:focus {
-  text-decoration: none;
-}
+.link:hover, .link:focus {  text-decoration: none;}
 
-.link:visited {
-  color: #e4c9ff;
-}
+.link:visited { color: #e4c9ff;}
 
 .navilink {
   color: white;
@@ -103,12 +65,7 @@ p {
   padding: 0.8rem;
 }
 
-.navilink:hover,
-.page-activ {
-  background-color: #363636;
-
-
-}
+.navilink:hover, .page-activ { background-color: #363636;}
 
 header {
   background-color: #171717;
@@ -144,12 +101,10 @@ footer {
   background-color: #171717;
   margin: 1rem -0.5rem;
   padding: 1rem 0.5rem;
-  }
-
-
-.infotext {
-  display: none;
 }
+
+
+.infotext { display: none;}
 
 .info-visible {
   display: block;
@@ -170,9 +125,7 @@ input[type="email"] {
   padding: 0.3rem;
 }
 
-input[type="radio"] {
-  margin-bottom: 1.3rem;
-}
+input[type="radio"] { margin-bottom: 1.3rem;}
 
 #submitbutton {
   padding: 0.7rem 1rem;
@@ -185,7 +138,9 @@ input[type="radio"] {
   font-weight: 500;
 }
 
-.vorname, .nachname, .email {
+.vorname,
+.nachname,
+.email {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -193,39 +148,20 @@ input[type="radio"] {
 }
 
 
-.legal p {
-  font-size: 0.9rem;
-}
-
-
-
-
-
-
-
-
-
+.legal p { font-size: 0.9rem;}
 
 
 
 
 
 /*Shop */
-.produktbild {
-  max-width: 50%;
-}
+.produktbild { max-width: 50%;}
 
-.produkdetail-tab td {
-  padding: 0.5rem;
-}
+.produkdetail-tab td { padding: 0.5rem;}
 
-.more-info td {
-  padding: 0.5rem 1.8rem 0.5rem 0;
-}
+.more-info td { padding: 0.5rem 1.8rem 0.5rem 0;}
 
-.more-info li {
-  margin-bottom: -1rem;
-}
+.more-info li { margin-bottom: -1rem;}
 
 select {
   font-family: inherit;
@@ -236,9 +172,7 @@ select {
 }
 
 
-.zwischentitel {
-  margin-bottom: -1rem;
-}
+.zwischentitel { margin-bottom: -1rem;}
 
 .waren-button {
   padding: 1rem 2rem;
@@ -265,34 +199,25 @@ select {
 
 
 
-
 /* Responsive all pages*/
-
 
 /* ganz klein; unter 350 px*/
 @media screen and (max-width: 350px) {
 
 
-  main {
-    padding: 0.2rem;
-  }
+  main { padding: 0.2rem; }
 
-  * {
-    padding: 0.1rem;
-  }
+  * { padding: 0.1rem; }
 
-   .masterh2 {
+  .masterh2 {
     font-size: 1rem;
     margin-left: 0.6rem;
   }
 
-  .zwischentitel {
-    margin-bottom: 0;
-  }
+  .zwischentitel {  margin-bottom: 0;  }
 
-  .headerlogo {
-    width: 15%;
-  }
+  .headerlogo {  width: 15%;  }
+
 
 }
 
@@ -300,30 +225,22 @@ select {
 /* klein; unter 500 px*/
 @media screen and (max-width: 500px) {
 
-  .produkdetail-tab td {
-    font-size: 0.9rem;
-  }
 
-  p {
-    font-size: 0.9rem;
-  }
+
+  .produkdetail-tab td { font-size: 0.9rem; }
+
+  p { font-size: 0.9rem; }
 
   .more-info td {
     padding: 0.5rem 1rem 0.5rem 0;
     font-size: 0.9rem;
   }
 
-  main {
-    padding: 0.6rem;
-  }
+  main {padding: 0.6rem; }
 
-  .produktbild {
-    max-width: 90%;
-  }
+  .produktbild { max-width: 90%; }
 
-  .waren-button {
-    font-size: 0.9rem;
-  }
+  .waren-button { font-size: 0.9rem;  }
 
   .trailervid {
     width: 90%;
@@ -334,11 +251,13 @@ select {
 
 /* gross; über 900 px*/
 @media screen and (min-width: 900px) {
+
   .zweier-grid {
     display: grid;
-    grid-template-columns: 50% 50%; }
+    grid-template-columns: 50% 50%;
+  }
 
-    .flexbox-formular {
+  .flexbox-formular {
     display: flex;
     flex-direction: row;
     justify-content: around;
@@ -347,28 +266,23 @@ select {
   .blackbox {
     margin: 1.5rem;
     padding: 2rem;
-    
+
   }
 
   input[type="text"],
   input[type="email"] {
-  border-radius: 7px;
-  font-family: inherit;
-  background-color: #e3e3e3;
-  border: none;
-  width: 50%;
-  margin-bottom: 0.5rem;
-}
+    border-radius: 7px;
+    width: 50%;
+    margin-bottom: 0.5rem;
+  }
 
 
-.masterhead,
-#masterhead {
-  font-size: 2.8rem;
-  margin: 0.9rem;
- }
+  .masterhead,
+  #masterhead {
+    font-size: 2.8rem;
+    margin: 0.9rem;
+  }
 
- .headerlogo {
-  width: 4%;
-}
+  .headerlogo {width: 4%; }
 
 }

@@ -21,32 +21,15 @@ body {
   /*Höhe soll 100% des Viewports sein */
 }
 
-main {
-  padding: 4rem;
-}
+main { padding: 4rem;}
 
 
-* {
-  padding: 0.5rem;
-}
+* { padding: 0.5rem;}
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-weight: 800;
-}
+h1, h2, h3, h4, h5 { font-weight: 800;}
 
 
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-  margin-bottom: 0.2em;
-}
+h1, h2, h3, h4, h5, p { margin-bottom: 0.2em;}
 
 .masterhead,
 #masterhead,
@@ -57,9 +40,7 @@ p {
   text-decoration: none;
 }
 
-.masterh2 {
-  font-size: 1.2rem;
-}
+.masterh2 {  font-size: 1.2rem;}
 
 .navilink {
   color: white;
@@ -67,41 +48,21 @@ p {
   padding: 0.8rem;
 }
 
-.navilink:hover,
-.page-activ {
-  background-color: #363636;
+.navilink:hover, .page-activ {background-color: #363636;}
 
-}
+.bold { font-weight: 500;}
 
-.bold {
-  font-weight: 500;
-}
+.italic { font-style: italic;}
 
-.italic {
-  font-style: italic;
-}
+.green { color: #b3ffc2;}
 
-.green {
-  color: #b3ffc2;
-}
+.small { font-size: 0.8rem;}
 
+.link { color: #ccebff;}
 
-.small {
-  font-size: 0.8rem;
-}
+.link:hover, .link:focus { text-decoration: none;}
 
-.link {
-  color: #ccebff;
-}
-
-.link:hover,
-.link:focus {
-  text-decoration: none;
-}
-
-.link:visited {
-  color: #e4c9ff;
-}
+.link:visited { color: #e4c9ff;}
 
 .blackbox {
   background-color: #171717;
@@ -134,10 +95,10 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
- 
+
 }
 
-/*End allgemein */
+/*End allgemeine Styles */
 
 
 .button {
@@ -150,10 +111,10 @@ footer {
   font-size: inherit;
   font-weight: 500;
   width: 50%;
- 
- }
 
- .button2 {
+}
+
+.button2 {
   padding: 0.7rem 3rem;
   background-color: #e3e3e3;
   color: #171717;
@@ -165,25 +126,26 @@ footer {
   max-width: 80%;
   margin-bottom: 1rem;
   display: none;
- }
+}
 
 .button:hover,
 button:focus {
   background-color: #363636;
   color: white;
- 
+
 }
 
 
-#restartbutton {display: none;}
+#restartbutton { display: none;}
 
-.spiel-titel {  margin: -1.5rem 0;}
+.spiel-titel { margin: -1.5rem 0;}
 
-#about-game {  margin-bottom: 1rem;}
+#about-game { margin-bottom: 1rem;}
 
-.gametitle { text-align: center; }
+.gametitle {text-align: center;}
 
-#score, #bonustext {
+#score,
+#bonustext {
   text-align: center;
   color: white;
   display: none;
@@ -201,27 +163,27 @@ h1 {
   text-align: center;
 }
 
-#game-over {  display: none;}
+#game-over {display: none;}
 
 /*Game elemente*/
 
 #game {
   width: 600px;
   height: 300px;
-   margin: auto;
-   position: relative;
-  
-   }
+  margin: auto;
+  position: relative;
 
- #background {
+}
+
+#background {
   position: absolute;
   background-size: cover;
   width: 600px;
   height: 300px;
   background-image: url("../data/game/wald.png");
- }
+}
 
-.background {background-size: cover;}
+.background { background-size: cover;}
 
 .bg-animation { animation: moveBg 6.33s linear infinite;}
 
@@ -230,17 +192,14 @@ h1 {
   width: 75px;
   top: 225px;
   position: relative;
-   background-size: cover;
+  background-size: cover;
 }
 
-.thor {
-  background-image: url("../data/game/thor.png");
-}
+.thor {  background-image: url("../data/game/thor.png");}
 
 .jump-animation { animation: jump 0.8s;}
 
 #blitz {
-  
   width: 50px;
   height: 50px;
   position: relative;
@@ -248,10 +207,10 @@ h1 {
   left: 520px;
   background-image: url("../data/game/blitz.png");
   background-size: cover;
-  
+
 }
 
-.blitz-animation {animation: blitz 2s infinite;}
+.blitz-animation { animation: blitz 2s infinite;}
 
 #herz {
   width: 50px;
@@ -261,7 +220,7 @@ h1 {
   left: 520px;
   background-image: url("../data/game/herz.png");
   background-size: cover;
- 
+
 }
 
 .herzAnimation { animation: herz1 3s infinite;}
@@ -273,26 +232,26 @@ h1 {
 @keyframes blitz {
   0% {  left: 520px; }
 
-  100% {   left: -50px; }
+  100% {left: -50px;  }
 }
 
 
 @keyframes jump {
-  0% {   top: 225px; }
+  0% { top: 225px; }
 
-  50% {  top: 75px; }
+  50% {top: 75px; }
 
-  75% { top: 75px; }
+  75% { top: 75px;}
 
-  100% {top: 225px; }
+  100% { top: 225px;}
 }
 
 
 
 @keyframes herz1 {
-  0% { left: 520px; }
+  0% {left: 520px;}
 
-  100% { left: -65px;}
+  100% { left: -65px; }
 }
 
 @keyframes herz2 {
@@ -321,23 +280,25 @@ h1 {
 
 
 @keyframes moveBg {
-  0% { background-position: 0 0;}
+  0% { background-position: 0 0; }
 
-  100% { background-position: -600px 0;}
+  100% { background-position: -600px 0; }
 }
 
-.death {background-image: url("../data/game/tot.png") }
-.herzCollect {background-image: url("../data/game/collect.png")}
+.death { background-image: url("../data/game/tot.png")}
+
+.herzCollect { background-image: url("../data/game/collect.png")}
 
 /*Der "Springen" Buttons soll nur für Touchscreens angezeigt werden, die keine Tastatur haben, mit der man springen kann*/
 
 /* smartphones, touchscreens */
 @media (hover: none) and (pointer: coarse) {
-  .button2 {display: block;}
-  
+  .button2 {  display: block; }
+
 }
+
 /* stylus-based screens */
 @media (hover: none) and (pointer: fine) {
-  .button2 {display: block;}
- 
+  .button2 { display: block; }
+
 }
