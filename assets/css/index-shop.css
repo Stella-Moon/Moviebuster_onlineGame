@@ -172,6 +172,10 @@ input[type="radio"] {
   font-weight: 500;
 }
 
+.vorname, .nachname, .email, {
+  display: flex;
+  justify-content: space-between;  
+}
 
 
 
