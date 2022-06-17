@@ -153,6 +153,20 @@ footer {
  
  }
 
+ .button2 {
+  padding: 0.7rem 3rem;
+  background-color: #e3e3e3;
+  color: #171717;
+  border: none;
+  border-radius: 15px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  max-width: 80%;
+  margin-bottom: 1rem;
+  display: none;
+ }
+
 .button:hover,
 button:focus {
   background-color: #363636;
@@ -204,7 +218,7 @@ h1 {
   background-size: cover;
   width: 600px;
   height: 300px;
-  background-image: url("https://lh3.googleusercontent.com/t8jzr310rC5obgwRHRljXVYqpVt_LwPzoBoBknYxU9QH4sDPlItjYN_IGNbDIaK6d89pVC7XxGM87-QypJ9CmgHXSA=w640-h400-e365-rj-sc0x00ffffff");
+  background-image: url("../data/game/wald.png");
  }
 
 .background {background-size: cover;}
@@ -216,8 +230,11 @@ h1 {
   width: 75px;
   top: 225px;
   position: relative;
-  background-image: url("https://www.pngkey.com/png/full/48-480753_designs-spacecraft-png-spaceship-birds-eye-view.png");
-  background-size: cover;
+   background-size: cover;
+}
+
+.thor {
+  background-image: url("../data/game/thor.png");
 }
 
 .jump-animation { animation: jump 0.8s;}
@@ -229,7 +246,7 @@ h1 {
   position: relative;
   top: 160px;
   left: 520px;
-  background-image: url("https://www.pngall.com/wp-content/uploads/12/Asteroid-Meteor-PNG.png");
+  background-image: url("../data/game/blitz.png");
   background-size: cover;
   
 }
@@ -242,7 +259,7 @@ h1 {
   position: absolute;
   top: 60px;
   left: 520px;
-  background-image: url("https://www.dwds.de/normal/Herz.png");
+  background-image: url("../data/game/herz.png");
   background-size: cover;
  
 }
@@ -309,5 +326,18 @@ h1 {
   100% { background-position: -600px 0;}
 }
 
-.death {background-color: red; }
-.herzCollect {background-color: green;}
+.death {background-image: url("../data/game/tot.png") }
+.herzCollect {background-image: url("../data/game/collect.png")}
+
+/*Der "Springen" Buttons soll nur für Touchscreens angezeigt werden, die keine Tastatur haben, mit der man springen kann*/
+
+/* smartphones, touchscreens */
+@media (hover: none) and (pointer: coarse) {
+  .button2 {display: block;}
+  
+}
+/* stylus-based screens */
+@media (hover: none) and (pointer: fine) {
+  .button2 {display: block;}
+ 
+}
