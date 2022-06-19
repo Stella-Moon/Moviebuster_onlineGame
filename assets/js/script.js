@@ -1,4 +1,9 @@
 // index
+// navigation 
+function navigate() {
+  location.href = "https://stella-moon.github.io/Moviebuster_onlineGame/"
+}
+
 // Formularvalidierung + Speichern in der Datenbank
 async function validierung() {
   const vorname = document.getElementById("vorname");
@@ -7,10 +12,13 @@ async function validierung() {
   const gewinnwahl = document.userdata.gewinnwahl.value;
   const submitbutton = document.getElementById("submitbutton");
 
+
+
   if (vorname.value == "") {
     document.getElementById('infotext-vn').innerHTML = "Bitte Vornamen angeben!";
     document.getElementById('infotext-vn').classList.add("info-visible");
     document.getElementById('infotext-vn').style.display = "block";
+    
   }
 
 
@@ -18,22 +26,24 @@ async function validierung() {
     document.getElementById('infotext-nn').innerHTML = "Bitte Nachnamen angeben!";
     document.getElementById('infotext-nn').classList.add("info-visible");
     document.getElementById('infotext-nn').style.display = "block";
+ 
   }
 
   else if (email.value == "") {
     document.getElementById('infotext-mail').innerHTML = "Bitte E-Mail Adresse angeben!";
     document.getElementById('infotext-mail').classList.add("info-visible");
     document.getElementById('infotext-mail').style.display = "block";
-
+   
   }
 
   else if (gewinnwahl == "") {
     document.getElementById('infotext-win').innerHTML = "Bitte angeben welchen Preis Sie gerne hätten!";
     document.getElementById('infotext-win').classList.add("info-visible");
     document.getElementById('infotext-win').style.display = "block";
-  }
+      }
 
   else {
+    submitbutton.disabled = false
     const databaseClient = {
       // Account Daten
       data: {
